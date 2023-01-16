@@ -14,6 +14,7 @@ env:
   BRANCH_NAME: auto-upstream-merge
   FORESIGHT_UPLOADER_SIGNER_URL: https://upload.service.runforesight.us
   WORKFLOW_TELEMETRY_BASE_URL: https://api.service.runforesight.us
+  FORESIGHT_LOG_LEVEL: DEBUG
   
 jobs:
   build:
@@ -27,7 +28,7 @@ jobs:
       if: always()
       uses: runforesight/foresight-workflow-kit-action@v1
       with:
-        api_key: ${{ secrets.FORESIGHT_API_KEY }}
+        api_key: 833262ba-ed1f-4b63-8ca8-901664cc501b
 
     - name: Setup .NET Core 2.1
       uses: actions/setup-dotnet@v1
